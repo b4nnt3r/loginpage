@@ -22,7 +22,7 @@ app.use(session({
 }));
 
 
-let requirments = {
+let requirements = {
   'username': 'brandon',
   'password': 'pickles'
 }
@@ -48,7 +48,7 @@ app.get('/login', function(req, res) {
 });
 
 app.post('/login', function(req, res) {
-  if (req.body.username === requirments.username && req.body.password === requirments.password) {
+  if (req.body.username === requirements.username && req.body.password === requirements.password) {
     req.session.admin = true;
     res.redirect('/');
   }
